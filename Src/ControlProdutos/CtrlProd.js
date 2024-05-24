@@ -16,6 +16,12 @@ module.exports={
         const resultado = await console.log('Fui requisitado nos Produtos')
 
     return res.send('Minha resposta - servidor rota Produtos')
+     },
+
+    
+     async EscondidonãoEscondido(req,res){
+        const resultado = await console.log('fui requisitado no escondido? como você sabe desse lugar?')
+        return res.send('amigo como você chegou aqui?')
      }
 }
 

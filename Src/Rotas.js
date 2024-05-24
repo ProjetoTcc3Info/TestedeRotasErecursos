@@ -13,6 +13,6 @@ rotas.get('/', ControProdu.Raiz   );
 
 rotas.get('/produtos', ControProdu.Produtos)
 
-
+rotas.get('/Monstros', ControProdu.EscondidonãoEscondido )
 
 module.exports = rotas ; 
