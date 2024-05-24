@@ -1,24 +1,15 @@
 
 const express = require('express')
+const rotas = require('./Rotas')
 
 
-const ServMestre = express()
+const ServGerent = express();
 
-ServMestre.get('/',(req, res) =>{
-    
-    console.log('Fui requisitado')
+ServGerent.use( rotas);
 
-     return res.send('Minha resposta - servidor rota Mestre')
-} )
 
-ServMestre.get('/produtos', (req, res)=>{
-  
-    console.log('Fui requisitado nos Produtos')
+ServGerent.listen( 3344,()=> console.log('Servidor Ligado na porta 3344, to rodando certinho por hora'));
 
-    return res.send('Minha resposta - servidor rota Produtos')
 
-})
-
-ServMestre.listen( 3344,()=> console.log('Servidor Ligado na porta 3344, to rodando certinho por hora'))
-
+//esse arquivo só tá aqui pra ligar o servidor, sem ele n roda porrra nenhuma, eu acho
 
